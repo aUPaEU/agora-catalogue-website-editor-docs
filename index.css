@@ -326,6 +326,15 @@ body {
   border-radius: 8px;
 }
 
+.icon-display {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  margin-top: 16px;
+  display: inline-block;
+}
+
 .site-footer {
   padding: 24px 0;
   background: transparent;
