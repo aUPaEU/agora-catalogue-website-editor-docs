@@ -312,6 +312,14 @@ body {
 
 .nested-list {
   display: none;
+  overflow: hidden;
+  transition: max-height 0.22s ease;
+  max-height: 0;
+}
+
+.nested-list.open {
+  display: block;
+  max-height: 400px; /* allow expansion animation */
 }
 
 .flex-container {
@@ -324,10 +332,12 @@ body {
   border: none;
   background: transparent;
   cursor: pointer;
-  width: 16px;
-  height: 16px;
-  padding: 0;
+  width: 28px; /* larger hit area */
+  height: 28px;
+  padding: 6px; /* keep visual plus centered */
+  box-sizing: content-box;
   position: relative;
+  display: inline-block;
 }
 
 .toggle-btn::before,
@@ -335,27 +345,40 @@ body {
   content: '';
   position: absolute;
   background-color: var(--accent);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.18s ease;
+  transform-origin: center;
 }
 
 .toggle-btn::before {
   width: 10px;
   height: 2px;
-  left: 3px;
-  top: 7px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .toggle-btn::after {
   width: 2px;
   height: 10px;
-  left: 7px;
-  top: 3px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .toggle-btn.open::after {
-  transform: rotate(90deg);
+  /* hide the vertical bar when open (show single horizontal '-') */
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
 .toggle-btn.open::before {
-  transform: rotate(180deg);
+  /* keep the horizontal bar as the visible '-' */
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 0.18s ease;
+}
+
+/* make the toggle area visible for accessibility */
+.toggle-btn {
+  opacity: 0.95;
 }
