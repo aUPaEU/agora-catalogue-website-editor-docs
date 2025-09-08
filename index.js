@@ -17,4 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Collapsible TOC sections
+  const collapsibleElements = document.querySelectorAll('.collapsible .toggle-btn');
+  collapsibleElements.forEach(element => {
+    element.addEventListener('click', function() {
+      this.classList.toggle('open');
+      const nestedList = this.closest('.collapsible').querySelector('.nested-list');
+      if (nestedList.style.display === 'block') {
+        nestedList.style.display = 'none';
+      } else {
+        nestedList.style.display = 'block';
+      }
+    });
+  });
 });

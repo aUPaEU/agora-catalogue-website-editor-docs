@@ -305,3 +305,57 @@ body {
 .muted {
   color: var(--muted);
 }
+
+.toc ul ul {
+  padding-left: 20px;
+}
+
+.nested-list {
+  display: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  position: relative;
+}
+
+.toggle-btn::before,
+.toggle-btn::after {
+  content: '';
+  position: absolute;
+  background-color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn::before {
+  width: 10px;
+  height: 2px;
+  left: 3px;
+  top: 7px;
+}
+
+.toggle-btn::after {
+  width: 2px;
+  height: 10px;
+  left: 7px;
+  top: 3px;
+}
+
+.toggle-btn.open::after {
+  transform: rotate(90deg);
+}
+
+.toggle-btn.open::before {
+  transform: rotate(180deg);
+}
