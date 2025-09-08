@@ -164,6 +164,7 @@ body {
 }
 .toc {
   position: relative;
+  overflow: visible; /* allow expanded nested lists to be visible */
 }
 .toc nav {
   position: sticky;
@@ -175,6 +176,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  overflow: visible;
 }
 .toc h3 {
   margin: 0 0 8px;
@@ -310,75 +312,36 @@ body {
   padding-left: 20px;
 }
 
-.nested-list {
-  display: none;
-  overflow: hidden;
-  transition: max-height 0.22s ease;
-  max-height: 0;
-}
-
-.nested-list.open {
+/* TOC hierarchy with color levels */
+.toc ul li a {
+  color: #1f6feb; /* Main level - darker blue */
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
   display: block;
-  max-height: 400px; /* allow expansion animation */
+  transition: all 0.2s ease;
 }
 
-.flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.toc ul li a:hover {
+  background-color: rgba(31, 111, 235, 0.1);
+  color: #0f4fb3;
+  transform: translateX(4px);
 }
 
-.toggle-btn {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  width: 28px; /* larger hit area */
-  height: 28px;
-  padding: 6px; /* keep visual plus centered */
-  box-sizing: content-box;
-  position: relative;
-  display: inline-block;
+.toc ul ul li a {
+  color: #4A90E2; /* Second level - medium blue */
 }
 
-.toggle-btn::before,
-.toggle-btn::after {
-  content: '';
-  position: absolute;
-  background-color: var(--accent);
-  transition: transform 0.3s ease, opacity 0.18s ease;
-  transform-origin: center;
+.toc ul ul li a:hover {
+  background-color: rgba(74, 144, 226, 0.1);
+  color: #2c6bb8;
 }
 
-.toggle-btn::before {
-  width: 10px;
-  height: 2px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.toc ul ul ul li a {
+  color: #7BB3F7; /* Third level - lighter blue */
 }
 
-.toggle-btn::after {
-  width: 2px;
-  height: 10px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.toggle-btn.open::after {
-  /* hide the vertical bar when open (show single horizontal '-') */
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0);
-  transition: opacity 0.18s ease, transform 0.18s ease;
-}
-
-.toggle-btn.open::before {
-  /* keep the horizontal bar as the visible '-' */
-  transform: translate(-50%, -50%) rotate(0deg);
-  transition: transform 0.18s ease;
-}
-
-/* make the toggle area visible for accessibility */
-.toggle-btn {
-  opacity: 0.95;
+.toc ul ul ul li a:hover {
+  background-color: rgba(123, 179, 247, 0.1);
+  color: #5099e8;
 }
