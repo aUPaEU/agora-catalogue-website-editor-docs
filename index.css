@@ -442,3 +442,30 @@ body {
   color: var(--accent);
   background-color: rgba(0, 122, 255, 0.1);
 }
+
+/* Image styles */
+.hero-image {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.doc-image {
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-top: 16px;
+}
+
+.doc-image-full {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-top: 16px;
+}
+
+.code-example {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  font-weight: lighter;
+  border-radius: 8px;
+}

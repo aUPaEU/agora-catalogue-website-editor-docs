@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="en">
+
   <head>
+    <title>Agora — Catalogue Editor Documentation</title>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Agora — Catalogue Editor Documentation</title>
-    <link rel="stylesheet" href="index.css" />
     <meta name="description" content="Documentation for the Agora catalogue editor (Odoo module)." />
+
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
   </head>
+
   <body>
     <header class="site-header">
       <div class="container header-inner">
@@ -17,7 +22,6 @@
             <div class="caption">Catalogue Editor Docs</div>
           </div>
         </div>
-        <button class="toc-toggle" aria-label="Toggle table of contents">☰</button>
       </div>
     </header>
 
@@ -26,11 +30,17 @@
         <div class="hero-left">
           <span class="eyebrow">Learn how to configure the</span>
           <h1>Agora Catalogue Editor</h1>
-          <p class="lead">Display any Agora model on your website with flexible layouts and card types — grid, list, calendar and more.</p>
-          <p><a class="btn primary" href="#getting-started">Get started — Add a catalogue</a></p>
+          <p class="lead">
+            Display any Agora model on your website with flexible layouts and card types — grid, list, calendar and more.
+          </p>
+          <p>
+            <a class="btn primary" href="#getting-started">
+              Get started — Add a catalogue
+            </a>
+          </p>
         </div>
         <div class="hero-right">
-          <img src="public/hero-image.png" alt="Agora Catalogue Screenshot" style="width: 100%; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+          <img src="public/hero-image.png" alt="Agora Catalogue Screenshot" class="hero-image">
         </div>
       </div>
     </section>
@@ -72,7 +82,7 @@
           <ol>
             <li>Enter <strong>Edit</strong> mode on the desired page.</li>
             <li>In the snippets panel, find the <strong>"Dynamic Snippet"</strong> under the "Custom Blocks" section.</li>
-            <img src="public/odoo-block.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+            <img src="public/odoo-block.png" alt="Agora Display Configuration" class="doc-image">
             <li>Drag and drop the snippet onto your page.</li>
             <li>Click on the newly added snippet to open the editor options on the right panel.</li>
           </ol>
@@ -83,7 +93,7 @@
           <p>The editor panel provides several options to customize your catalogue.</p>
 
           <h3 id="data-source">Data Source</h3>
-          <img src="public/3-data-source-configuration.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/3-data-source-configuration.png" alt="Agora Display Configuration" class="doc-image">
           <p>This is the most crucial step. Here you define what information will be displayed.</p>
           <ul>
             <li><strong>Model:</strong> Select the Odoo model that contains the data you want to show (e.g., Products, Services, Events, Contacts). Once you select a model, other options will become available based on the fields of that model.</li>
@@ -92,12 +102,12 @@
         </ul>
 
           <h3 id="display--layout">Visualization</h3>
-          <img src="public/1-display-configuration.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/1-display-configuration.png" alt="Agora Display Configuration" class="doc-image">
           <p><strong>Main View Type:</strong> Choose the main layout for your catalogue. Options: Grid, List, Calendar, Map. <br><a href="#available-visualizations-layouts">See available layouts</a></p>
           <p><strong>Element Type:</strong> Select the style for each individual item in the list. Options: Default Card, Avatar Card, Collapsable Card, Adaptable Card. <br><a href="#available-card-types">See available cards</a></p>
 
           <h3 id="card-appearance">Fields</h3>
-          <img src="public/4-card-content-configuration.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/4-card-content-configuration.png" alt="Agora Display Configuration" class="doc-image">
           <p>These options control what information appears on each card within the list.</p>
           <ul>
             <li><strong>Card Title:</strong> Select a field from your model to be used as the main title for each card.</li>
@@ -105,22 +115,22 @@
           </ul>
           <h4 id="fields-toggle">Toggle</h4>
           <p><strong>Visible Fields:</strong> Toggle visibility of fields. Relationship fields can be expanded. <em>Important:</em> These fields will only be visible in the detail view, not on the cards themselves.</p>
-          <img src="public/field-toogle.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/field-toogle.png" alt="Agora Display Configuration" class="doc-image">
           <h4 id="fields-widgets">Widgets</h4>
           <p>The web widgets, are custom HTML elements that could be selected to display an specific field of the model. Depending on the field type, the available widgets may vary. New widgets can be requested.</p>
           <span>Available widgets</span>
           <ul>
             <li><strong>Tag:</strong> Renders a link to the related record for many-to-one or many-to-many relationship fields.</li>
-            <img src="public/widget-tag.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+            <img src="public/widget-tag.png" alt="Agora Display Configuration" class="doc-image">
             <li ><strong>Url:</strong> Displays the field value within a styled badge. Ideal for status indicators or categorical data.</li>
-            <img src="public/widget-url.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+            <img src="public/widget-url.png" alt="Agora Display Configuration" class="doc-image">
             <li><strong>Url Chip:</strong> Displays the field value as an image. Ideal for fields containing image URLs or binary image data.</li>
-            <img src="public/widget-url-chip.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+            <img src="public/widget-url-chip.png" alt="Agora Display Configuration" class="doc-image">
         </ul>
 
           <h3 id="sorting">Sorting</h3>
           <p>Define the default order in which items will be displayed.</p>
-          <img src="public/sorting-options.png" alt="Agora Display Configuration" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/sorting-options.png" alt="Agora Display Configuration" class="doc-image">
 
           <ul>
             <li><strong>Order Criteria:</strong> Choose the field by which the items should be sorted (e.g., Name, Date, Price).</li>
@@ -129,16 +139,16 @@
 
           <h3 id="filters">Filters</h3>
           <p>Add filters to allow users to narrow down results (e.g., Sales Team, Sales Person). <br>In example:<br>
-            <pre style="background-color: #2d3748; color: #e2e8f0; font-weight: lighter; border-radius: 8px;"><code >domain: [('field', '=', 'value')]</code></pre>
+            <pre class="code-example"><code >domain: [('field', '=', 'value')]</code></pre>
             <br/><a href="https://www.odoo.com/documentation/15.0/fr/developer/tutorials/getting_started/07_basicviews.html?utm_source=chatgpt.com#domains" target="_blank">Learn more about domains</a>
         </p>
 
           <h3 id="additional-features">Additional Features</h3>
-          <img src="public/5-additional-features-configuration.png" alt="Agora Additional Features" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/5-additional-features-configuration.png" alt="Agora Additional Features" class="doc-image">
           <p>Enable or disable optional functionality for each element.</p>
           <ul>
               <li><strong>Enable Share Actions:</strong> Show social media sharing buttons on the detail view.</li>
-              <img src="public/share-actions.png" alt="Agora Additional Features" style="border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+              <img src="public/share-actions.png" alt="Agora Additional Features" class="doc-image">
               <li><strong>Enable PDF Reports:</strong> Allows users to download a PDF version of the item details. This requires a developer to first set up the report action. The <strong>Create Report Action</strong> option in the editor generates a printable PDF report (qweb-pdf) by creating an <code>ir.actions.report</code> in the backend. This is a developer-oriented feature.</li>
               <li><strong>Show Contact Button:</strong> Display a button to contact the responsible person.</li>
               <li><strong>Show Menu And Footer:</strong> Toggles the visibility of the main website navigation and footer, allowing the catalogue to be displayed in a more "embedded" or "full-page" mode.</li>
@@ -157,6 +167,11 @@
           <div class="icon-display">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
           </div>
+          <h3>Vertical Grid</h3>
+          <p>Column-based grid layout that flows top-to-bottom then left-to-right — ideal for Pinterest-style masonry layouts and content with varying heights.</p>
+          <div class="icon-display">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="10" width="7" height="11"></rect></svg>
+          </div>
           <h3>Calendar View</h3>
           <p>Requires a date/datetime field. <em><b>Coming soon</b></em>.</p>
           <h3>Map View</h3>
@@ -167,17 +182,17 @@
           <h2>Available Card Types</h2>
           <h3>Default Card</h3>
           <p>This card will display a title, an image and a summary. This type is optimal for showcasing key information at a glance for elements where the image is important.</p>
-          <img src="public/default-card.png" alt="Default Card Example" style="max-width: 100%; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/default-card.png" alt="Default Card Example" class="doc-image-full">
           <h3>Avatar Card</h3>
           <p>Prominent circular image for people/contact lists.</p>
-          <img src="public/avatar-card.png" alt="Avatar Card Example" style="max-width: 100%; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/avatar-card.png" alt="Avatar Card Example" class="doc-image-full">
           <h3>Collapsable Card</h3>
           <p>Compact view with expandable details. This card is mostly recommended for elements with extensive info that should be accessible directly and doesn't have image. I.e. Funding opportunities.</p>
-          <img src="public/expandable-card-collapsed.png" alt="Collapsable Card Example" style="max-width: 100%; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
-          <img src="public/expandable-card.png" alt="Collapsable Card Example Expanded" style="max-width: 100%; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/expandable-card-collapsed.png" alt="Collapsable Card Example" class="doc-image-full">
+          <img src="public/expandable-card.png" alt="Collapsable Card Example Expanded" class="doc-image-full">
           <h3>Adaptable Card</h3>
           <p>Layout adjusts to different field types and lengths. I.e. If the card does not have image, the card will shrink. The layout will look in a Pinterest-like manner.</p>
-          <img src="public/adaptable-card.png" alt="Adaptable Card Example" style="max-width: 100%; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/adaptable-card.png" alt="Adaptable Card Example" class="doc-image-full">
         </section>
 
         <section id="detail-view-section">
@@ -187,7 +202,7 @@
             Configure Summary and Description fields in the editor, and any visible fields will appear as part of the detail layout.
             <em>The summary will appear above the image, while the description will be below it.</em>
           </p>
-          <img src="public/detail-view.png" alt="Detail View Example" style="max-width: 100%; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-top: 16px;">
+          <img src="public/detail-view.png" alt="Detail View Example" class="doc-image-full">
         </section>
       </article>
     </div>
@@ -198,6 +213,5 @@
       </div>
     </footer>
 
-    <script src="index.js"></script>
   </body>
 </html>
